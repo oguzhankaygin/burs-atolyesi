@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Burs Başvuru Cümle Atölyesi</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="masthead">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">✳</span> Cümle Atölyesi</div>
+      <span id="provider" class="badge" role="status" hidden></span>
+    </header>
+    <section class="intro" aria-labelledby="title">
+      <h1 id="title">Burs Başvuru<br>Cümle Atölyesi</h1>
+      <p>Taslağını dört açıdan incele, eksik ayrıntıları bul ve cümlelerini kendi sesinle geliştir.</p>
+      <p class="note">Atölye, başvuru yanıtını senin yerine yazmaz. Düzenleyebileceğin cümleleri gösterir ve sana sorular sorar.</p>
+    </section>
+
+    <div class="workspace">
+      <section class="panel" aria-labelledby="form-title">
+        <div class="section-head">
+          <h2 id="form-title">Başvuru taslağın</h2>
+          <button type="button" class="secondary" id="example">Örnek doldur</button>
+        </div>
+        <form id="application">
+          <label>Program / burs adı
+            <input name="program_adi" maxlength="200" placeholder="Örn. Kent ve İklim Gençlik Programı" required>
+          </label>
+          <label>Program açıklaması
+            <textarea name="program_aciklamasi" rows="3" maxlength="10000" placeholder="Programın çağrı metnini buraya yapıştır." required></textarea>
+          </label>
+          <label>Başvuru sorusu
+            <input name="soru" maxlength="1000" placeholder="Bu programa neden başvuruyorsunuz?" required>
+          </label>
+          <label>Deneyimlerin
+            <textarea name="deneyimler" rows="4" maxlength="6000" placeholder="Her satıra bir deneyim yaz. Rolünü ve sonucunu ekleyebilirsin." required></textarea>
+          </label>
+          <label>Taslak yanıtın
+            <textarea id="draft" name="taslak" rows="6" maxlength="12000" placeholder="Başvuru formuna yazmayı düşündüğün yanıt…" required></textarea>
+          </label>
+          <output id="live-count" for="draft" class="muted" aria-label="Taslak uzunluğu"></output>
+          <fieldset>
+            <legend>Uzunluk sınırları <span class="muted">(isteğe bağlı)</span></legend>
+            <div class="limit-inputs">
+              <label>Karakter <input type="number" name="karakter_siniri" min="1" max="100000" placeholder="Örn. 1.500"></label>
+              <label>Kelime <input type="number" name="kelime_siniri" min="1" max="100000" placeholder="Örn. 250"></label>
+            </div>
+          </fieldset>
+          <label class="check"><input type="checkbox" id="save-draft"> Taslağımı bu tarayıcıda tut</label>
+          <div class="actions">
+            <button type="submit" id="evaluate">Taslağı değerlendir</button>
+            <button type="button" class="secondary" id="clear">Temizle</button>
+          </div>
+          <p id="form-status" class="muted" role="status"></p>
+          <p id="error" class="error" role="alert" hidden></p>
+        </form>
+      </section>
+      <section class="panel feedback" aria-labelledby="feedback-title" id="feedback">
+        <h2 id="feedback-title" tabindex="-1">Geri bildirim</h2>
+        <div id="empty">
+          <p class="muted">Taslağını değerlendirdiğinde bölüm puanlarını ve cümle önerilerini burada göreceksin.</p>
+          <ul class="outline">
+            <li><strong>Motivasyon</strong><span>Neden bu alan, neden şimdi?</span></li>
+            <li><strong>Kanıt</strong><span>Ne yaptın, nasıl bir sonuç aldın?</span></li>
+            <li><strong>Uyum</strong><span>Programın hangi imkânı hedefinle örtüşüyor?</span></li>
+            <li><strong>Katkı / Gelecek</strong><span>Programdan sonra hangi adımı atacaksın?</span></li>
+          </ul>
+        </div>
+        <div id="results" hidden>
+          <div id="scores" class="scores"></div>
+          <h3>Uzunluk kontrolü</h3>
+          <ul id="limits" class="limit-results"></ul>
+          <h3>İncelenen taslak</h3>
+          <p id="annotated" class="annotated"></p>
+          <h3>Cümle önerileri</h3>
+          <div id="suggestions" class="suggestions"></div>
+          <h3>Kontrol listesi</h3>
+          <div id="checklist" class="checklist"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

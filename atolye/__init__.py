@@ -1,0 +1,1 @@
+"""Burs Başvuru Cümle Atölyesi."""
