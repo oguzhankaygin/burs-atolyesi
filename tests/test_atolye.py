@@ -182,6 +182,13 @@ class HTTPTests(unittest.TestCase):
         cls.thread.join()
         cls.server.server_close()
 
+    def test_foreign_host_rejected(self):
+        for method, path, body in (("GET", "/api/durum", None), ("POST", "/api/degerlendir", b"{}")):
+            status, _, _ = self.request(method, path, body,
+                                        {"Host": "saldirgan.example", "X-Atolye-Request": "1",
+                                         "Content-Type": "application/json"})
+            self.assertEqual(status, 403)
+
     def request(self, method, path, body=None, headers=None):
         if self.server is None:
             incoming = io.BytesIO()
@@ -197,7 +204,7 @@ class HTTPTests(unittest.TestCase):
             )
 
             def handle():
-                WorkshopHandler(request, ("localhost", 0), SimpleNamespace(provider=provider()))
+                WorkshopHandler(request, ("localhost", 0), SimpleNamespace(provider=provider(), server_address=("127.0.0.1", 80)))
 
             thread = Thread(target=handle)
             thread.start()
@@ -251,3 +258,4 @@ class HTTPTests(unittest.TestCase):
                     self.assertEqual(set(data["bolumler"]), set(SECTIONS))
                 else:
                     self.assertTrue(data["hata"])
+

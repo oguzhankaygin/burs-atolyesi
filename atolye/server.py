@@ -59,7 +59,24 @@ class WorkshopHandler(BaseHTTPRequestHandler):
     def fail(self, status, message):
         self.send_json(status, {"hata": message})
 
+    def host_allowed(self):
+        # DNS rebinding'e karşı: yalnızca sunucunun kendi adresiyle gelen isteklere yanıt ver.
+        host, port = self.server.server_address[:2]
+        names = {"127.0.0.1", "localhost", "[::1]"}
+        if host not in ("", "0.0.0.0", "::"):
+            names.add(f"[{host}]" if ":" in host else host)
+        allowed = {f"{name}:{port}" for name in names}
+        if port == 80:
+            allowed |= names
+        values = self.headers.get_all("Host", [])
+        if len(values) == 1 and values[0].lower() in allowed:
+            return True
+        self.fail(403, "Bu adres üzerinden erişime izin verilmiyor.")
+        return False
+
     def do_GET(self):
+        if not self.host_allowed():
+            return
         try:
             path = urlsplit(self.path).path
         except ValueError:
@@ -76,6 +93,8 @@ class WorkshopHandler(BaseHTTPRequestHandler):
     do_HEAD = do_GET
 
     def do_POST(self):
+        if not self.host_allowed():
+            return
         if self.path != "/api/degerlendir":
             self.fail(404, "Uç nokta bulunamadı.")
             return
