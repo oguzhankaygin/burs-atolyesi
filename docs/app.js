@@ -301,6 +301,8 @@ async function loadStatus() {
 restoreDraft();
 if (staticMode) {
   byId("privacy").hidden = false;
+  // Pages sürümü bir kez açıldıktan sonra internetsiz de çalışsın.
+  navigator.serviceWorker?.register("./sw.js").catch(() => {});
 } else {
   byId("evaluate").hidden = false;
   loadStatus();

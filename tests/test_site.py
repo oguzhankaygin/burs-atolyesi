@@ -43,3 +43,12 @@ class SiteTests(unittest.TestCase):
             with self.subTest(case=case["name"]):
                 form = dict(CASES["form"], **case["form"])
                 self.assertEqual(validate_response(demo_response(form), form), case["expected"])
+
+
+class OfflineTests(unittest.TestCase):
+    def test_service_worker_caches_existing_site_files(self):
+        sw = (DOCS / "sw.js").read_text(encoding="utf-8")
+        liste = json.loads(sw.split("const DOSYALAR = ", 1)[1].split(";\n", 1)[0])
+        self.assertIn("./index.html", liste)
+        for dosya in liste[1:]:
+            self.assertTrue((DOCS / dosya).is_file(), dosya)

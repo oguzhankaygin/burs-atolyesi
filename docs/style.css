@@ -148,3 +148,8 @@ summary { cursor: pointer; color: var(--accent); font-weight: 700; }
 .guide li + li { margin-top: .35rem; }
 #prompt-fallback { display: block; margin-bottom: .75rem; }
 #parse { margin-top: .75rem; }
+
+.site-footer {
+  margin-top: 2rem;
+  font-size: .95rem;
+}
