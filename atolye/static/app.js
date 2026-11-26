@@ -1,4 +1,7 @@
-"use strict";
+import { buildPrompt, charCount, parseResponse, sections, trim, validateResponse, wordCount } from "./analysis.mjs";
+import { demoResponse } from "./demo.mjs";
+import { staticMode } from "./config.mjs";
+import { systemPrompt } from "./prompt.mjs";
 
 const byId = (id) => document.getElementById(id);
 const form = byId("application");
@@ -7,12 +10,6 @@ const saveDraft = byId("save-draft");
 const fields = ["program_adi", "program_aciklamasi", "soru", "deneyimler", "taslak",
   "karakter_siniri", "kelime_siniri"];
 const storageKey = "burs-atolyesi-taslak-v1";
-const sections = {
-  motivasyon: "Motivasyon",
-  kanit: "Kanıt",
-  uyum: "Uyum",
-  gelecek: "Katkı / Gelecek",
-};
 const example = {
   program_adi: "Kent ve İklim Gençlik Programı",
   program_aciklamasi: "Program, lise öğrencilerine mahalle ölçeğinde iklim gözlemi yapmayı öğretir. Katılımcılar veri okuryazarlığı atölyelerine katılır, bir mentorla çalışır ve sonuçlarını yerel bir sunumda paylaşır.",
@@ -38,9 +35,7 @@ function fill(values) {
 }
 
 function updateCount() {
-  const count = Array.from(draft.value).length;
-  const words = draft.value.match(/[^\u0009-\u000d\u001c-\u0020\u0085\p{Z}]+/gu)?.length ?? 0;
-  byId("live-count").value = `${count} karakter · ${words} kelime`;
+  byId("live-count").value = `${charCount(draft.value)} karakter · ${wordCount(draft.value)} kelime`;
 }
 
 function showError(message) {
@@ -178,12 +173,8 @@ function resetResult() {
   byId("form-status").textContent = "";
 }
 
-async function submit(event) {
-  event.preventDefault();
+async function evaluateOnServer(values) {
   const button = byId("evaluate");
-  const values = Object.fromEntries(new FormData(form));
-  for (const name of fields.slice(-2)) values[name] = values[name] ? Number(values[name]) : null;
-  resetResult();
   const controls = [...form.elements, byId("example")].filter((control) => !control.disabled);
   controls.forEach((control) => { control.disabled = true; });
   byId("feedback").setAttribute("aria-busy", "true");
@@ -205,10 +196,92 @@ async function submit(event) {
     showError("Değerlendirme alınamadı. Bağlantını kontrol edip tekrar dene.");
   } finally {
     controls.forEach((control) => { control.disabled = false; });
-    button.textContent = "Taslağı değerlendir";
+    button.textContent = "Taslağı sunucuda değerlendir";
     byId("feedback").removeAttribute("aria-busy");
     byId("form-status").textContent = "";
   }
+}
+
+let activePrompt;
+
+async function openClaude(values) {
+  const guide = byId("claude-guide");
+  const fallback = byId("prompt-fallback");
+  const prompt = byId("prompt");
+  const status = byId("form-status");
+  const text = buildPrompt(systemPrompt, values);
+  activePrompt = text;
+  guide.open = true;
+  // Panoya yazma ve yeni sekme açma aynı kullanıcı etkileşiminde başlatılır.
+  let copy;
+  try {
+    copy = navigator.clipboard?.writeText(text);
+  } catch {
+    // Bazı tarayıcılar panoya erişimi eşzamanlı olarak reddeder.
+  }
+  window.open("https://claude.ai/new", "_blank", "noopener,noreferrer");
+  try {
+    if (!copy) throw new Error();
+    await copy;
+    if (activePrompt !== text) return;
+    status.textContent = "İstem kopyalandı. Claude sohbetine yapıştırıp gönder.";
+  } catch {
+    if (activePrompt !== text) return;
+    prompt.value = text;
+    fallback.hidden = false;
+    prompt.focus();
+    prompt.select();
+    status.textContent = "Panoya otomatik kopyalanamadı. Seçili istemi kopyala.";
+  }
+}
+
+function submit(event) {
+  event.preventDefault();
+  clearClaudePrompt();
+  const values = Object.fromEntries(new FormData(form));
+  for (const name of fields.slice(-2)) values[name] = values[name] ? Number(values[name]) : null;
+  resetResult();
+  const empty = fields.slice(0, -2).find((name) => !trim(values[name]));
+  if (empty) {
+    const input = form.elements.namedItem(empty);
+    showError("Bu alanı doldur.");
+    input.focus();
+    return;
+  }
+
+  switch (event.submitter?.id) {
+    case "claude":
+      openClaude(values);
+      break;
+    case "parse": {
+      let response;
+      try {
+        response = parseResponse(byId("claude-response").value);
+      } catch {
+        showError("Claude’un yanıtı okunamadı. JSON yanıtının tamamını yapıştır.");
+        byId("claude-response").focus();
+        return;
+      }
+      try {
+        renderResult(validateResponse(response, values), values.taslak);
+      } catch (error) {
+        showError(error.message);
+        byId("claude-response").focus();
+      }
+      break;
+    }
+    case "evaluate":
+      if (!staticMode) evaluateOnServer(values);
+      break;
+    default:
+      renderResult(validateResponse(demoResponse(values), values), values.taslak);
+  }
+}
+
+function clearClaudePrompt() {
+  activePrompt = undefined;
+  byId("prompt").value = "";
+  byId("prompt-fallback").hidden = true;
 }
 
 async function loadStatus() {
@@ -226,13 +299,20 @@ async function loadStatus() {
 }
 
 restoreDraft();
-loadStatus();
+if (staticMode) {
+  byId("privacy").hidden = false;
+} else {
+  byId("evaluate").hidden = false;
+  loadStatus();
+}
 form.addEventListener("input", () => {
   updateCount();
   persistDraft();
 });
 form.addEventListener("submit", submit);
 byId("example").addEventListener("click", () => {
+  clearClaudePrompt();
+  byId("claude-response").value = "";
   resetResult();
   fill(example);
   persistDraft();
@@ -240,6 +320,8 @@ byId("example").addEventListener("click", () => {
 });
 byId("clear").addEventListener("click", () => {
   form.reset();
+  clearClaudePrompt();
+  byId("claude-guide").open = false;
   resetResult();
   updateCount();
   persistDraft();

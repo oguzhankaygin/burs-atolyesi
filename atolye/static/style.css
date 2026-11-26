@@ -136,3 +136,15 @@ blockquote { margin: .35rem 0; padding-left: .6rem; border-left: 2px solid var(-
 @media (max-width: 46rem) {
   .workspace { grid-template-columns: 1fr; }
 }
+
+:root { --control-border: #677d72; }
+@media (prefers-color-scheme: dark) {
+  :root { --control-border: #849a8f; }
+}
+input:not([type="checkbox"]), textarea, button.secondary { border-color: var(--control-border); }
+a { color: var(--accent); }
+summary { cursor: pointer; color: var(--accent); font-weight: 700; }
+.guide { padding-inline-start: 1.5rem; }
+.guide li + li { margin-top: .35rem; }
+#prompt-fallback { display: block; margin-bottom: .75rem; }
+#parse { margin-top: .75rem; }

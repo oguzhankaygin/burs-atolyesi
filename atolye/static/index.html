@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Burs Başvuru Cümle Atölyesi</title>
-  <link rel="stylesheet" href="/style.css">
-  <script src="/app.js" defer></script>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.js"></script>
 </head>
 <body>
   <main class="shell">
@@ -17,6 +17,7 @@
       <h1 id="title">Burs Başvuru<br>Cümle Atölyesi</h1>
       <p>Taslağını dört açıdan incele, eksik ayrıntıları bul ve cümlelerini kendi sesinle geliştir.</p>
       <p class="note">Atölye, başvuru yanıtını senin yerine yazmaz. Düzenleyebileceğin cümleleri gösterir ve sana sorular sorar.</p>
+      <p id="privacy" class="note" hidden>Bu sayfa başvuru verilerini herhangi bir sunucuya göndermez. Claude’a yapıştırdığın metin Claude ile paylaşılır.</p>
     </section>
 
     <div class="workspace">
@@ -25,7 +26,7 @@
           <h2 id="form-title">Başvuru taslağın</h2>
           <button type="button" class="secondary" id="example">Örnek doldur</button>
         </div>
-        <form id="application">
+        <form id="application" method="post">
           <label>Program / burs adı
             <input name="program_adi" maxlength="200" placeholder="Örn. Kent ve İklim Gençlik Programı" required>
           </label>
@@ -51,9 +52,25 @@
           </fieldset>
           <label class="check"><input type="checkbox" id="save-draft"> Taslağımı bu tarayıcıda tut</label>
           <div class="actions">
-            <button type="submit" id="evaluate">Taslağı değerlendir</button>
+            <button type="submit" id="quick">Hızlı kontrol (çevrimdışı)</button>
+            <button type="submit" id="claude">Claude ile değerlendir</button>
+            <button type="submit" id="evaluate" class="secondary" hidden>Taslağı sunucuda değerlendir</button>
             <button type="button" class="secondary" id="clear">Temizle</button>
           </div>
+          <details id="claude-guide">
+            <summary>Claude’un yanıtını yapıştır</summary>
+            <ol class="guide">
+              <li>Formu doldur ve <strong>Claude ile değerlendir</strong> düğmesine bas.</li>
+              <li><a href="https://claude.ai/new" target="_blank" rel="noopener noreferrer">Claude’u aç</a>, kendi ücretsiz hesabınla oturum aç, istemi sohbete yapıştır ve gönder.</li>
+              <li>Claude’un yanıtını kopyala ve aşağıya yapıştır.</li>
+            </ol>
+            <label id="prompt-fallback" hidden>Claude’a göndereceğin istem
+              <textarea id="prompt" rows="5" readonly></textarea>
+            </label>
+            <label for="claude-response">Claude’un JSON yanıtı</label>
+            <textarea id="claude-response" rows="5" spellcheck="false"></textarea>
+            <button type="submit" id="parse" class="secondary">Yanıtı göster</button>
+          </details>
           <p id="form-status" class="muted" role="status"></p>
           <p id="error" class="error" role="alert" hidden></p>
         </form>

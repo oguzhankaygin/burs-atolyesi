@@ -1,0 +1,543 @@
+{
+  "form": {
+    "program_adi": "İklim Atölyesi",
+    "program_aciklamasi": "Sıcaklık ölçümü ve veri atölyesi.",
+    "soru": "Neden başvuruyorsun?",
+    "deneyimler": "6 noktada sıcaklık ölçtüm.",
+    "taslak": "Fark yaratmak istiyorum.Başarılı bir liderim. 🌱",
+    "karakter_siniri": 25,
+    "kelime_siniri": 2
+  },
+  "responses": [
+    {
+      "name": "Kod bloğu, alan kırpma, alıntı doğrulama ve Unicode",
+      "raw": "İşte yanıt.\n```JSON\n{\"bolumler\":{\"motivasyon\":{\"puan\":9,\"gerekce\":\"\\ud83c\\udf31GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG\",\"soru\":\" Ne yapt\\u0131n? \"},\"kanit\":{\"puan\":-4,\"gerekce\":\" Kan\\u0131t gerekir. \",\"soru\":\"\\u0085\"},\"uyum\":{\"puan\":2,\"gerekce\":\"\\ud800 \\u00d6rnek {dize} ve \\\"t\\u0131rnak\\\".\",\"soru\":\" Ne yapt\\u0131n? \"},\"gelecek\":{\"puan\":2,\"gerekce\":\" Kan\\u0131t gerekir. \",\"soru\":\"SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS\"}},\"zayif_cumleler\":[{\"alinti\":\"Fark yaratmak istiyorum.\",\"tur\":\"uzun\",\"aciklama\":\"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\",\"oneri\":\"\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\"},{\"alinti\":\"Fark yaratmak istiyorum.\",\"tur\":\"uzun\",\"aciklama\":\"Ayr\\u0131nt\\u0131.\",\"oneri\":\"Somut \\u00f6rnek.\"},{\"alinti\":\"ba\\u015far\\u0131l\\u0131 bir liderim.\",\"tur\":\"uzun\",\"aciklama\":\"Ayr\\u0131nt\\u0131.\",\"oneri\":\"Somut \\u00f6rnek.\"},{\"alinti\":\"Ba\\u015far\\u0131l\\u0131 bir liderim.\",\"tur\":\"ge\\u00e7ersiz\",\"aciklama\":\"Ayr\\u0131nt\\u0131.\",\"oneri\":\"Somut \\u00f6rnek.\"},{\"alinti\":\"\\ud83c\\udf31\",\"tur\":\"uzun\",\"aciklama\":\"Ayr\\u0131nt\\u0131.\",\"oneri\":\" \"},{\"alinti\":\"Ba\\u015far\\u0131l\\u0131 bir liderim.\",\"tur\":\"uzun\",\"aciklama\":\"Ayr\\u0131nt\\u0131.\",\"oneri\":\"Somut \\u00f6rnek.\"}],\"kontrol_listesi\":[\" Rol\\u00fcm\\u00fc ekledim. \",\"Rol\\u00fcm\\u00fc ekledim.\",\"\",false,\"KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK\"],\"tam_yanit\":\"At\\u0131lacak alan.\"}\n```\nBitti.",
+      "expected": {
+        "bolumler": {
+          "motivasyon": {
+            "puan": 3,
+            "gerekce": "🌱GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+            "soru": ""
+          },
+          "kanit": {
+            "puan": 0,
+            "gerekce": "Kanıt gerekir.",
+            "soru": "Bu bölümü hangi somut ayrıntıyla güçlendirebilirsin?"
+          },
+          "uyum": {
+            "puan": 2,
+            "gerekce": "? Örnek {dize} ve \"tırnak\".",
+            "soru": "Ne yaptın?"
+          },
+          "gelecek": {
+            "puan": 2,
+            "gerekce": "Kanıt gerekir.",
+            "soru": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS"
+          }
+        },
+        "zayif_cumleler": [
+          {
+            "alinti": "Fark yaratmak istiyorum.",
+            "tur": "uzun",
+            "aciklama": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "oneri": "ÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖ"
+          },
+          {
+            "alinti": "Başarılı bir liderim.",
+            "tur": "uzun",
+            "aciklama": "Ayrıntı.",
+            "oneri": "Somut örnek."
+          }
+        ],
+        "kontrol_listesi": [
+          "Rolümü ekledim.",
+          "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+          "Bu alana neden şimdi başvurduğumu açıkladım.",
+          "İddialarımı somut deneyimlerimle destekledim.",
+          "Deneyimimdeki rolümü ve sonucunu belirttim."
+        ],
+        "sinir_kontrolu": {
+          "karakter": {
+            "sayi": 48,
+            "sinir": 25,
+            "asim": 23
+          },
+          "kelime": {
+            "sayi": 7,
+            "sinir": 2,
+            "asim": 5
+          }
+        }
+      }
+    },
+    {
+      "name": "Kod bloğu olmadan önceki ve sonraki açıklama",
+      "raw": "Yanıt {\"bolumler\":{\"motivasyon\":{\"puan\":9,\"gerekce\":\"\\ud83c\\udf31GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG\",\"soru\":\" Ne yapt\\u0131n? \"},\"kanit\":{\"puan\":-4,\"gerekce\":\" Kan\\u0131t gerekir. \",\"soru\":\"\\u0085\"},\"uyum\":{\"puan\":2,\"gerekce\":\"\\ud800 \\u00d6rnek {dize} ve \\\"t\\u0131rnak\\\".\",\"soru\":\" Ne yapt\\u0131n? \"},\"gelecek\":{\"puan\":2,\"gerekce\":\" Kan\\u0131t gerekir. \",\"soru\":\"SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS\"}},\"zayif_cumleler\":[{\"alinti\":\"Fark yaratmak istiyorum.\",\"tur\":\"uzun\",\"aciklama\":\"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\",\"oneri\":\"\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\\u00d6\"},{\"alinti\":\"Fark yaratmak istiyorum.\",\"tur\":\"uzun\",\"aciklama\":\"Ayr\\u0131nt\\u0131.\",\"oneri\":\"Somut \\u00f6rnek.\"},{\"alinti\":\"ba\\u015far\\u0131l\\u0131 bir liderim.\",\"tur\":\"uzun\",\"aciklama\":\"Ayr\\u0131nt\\u0131.\",\"oneri\":\"Somut \\u00f6rnek.\"},{\"alinti\":\"Ba\\u015far\\u0131l\\u0131 bir liderim.\",\"tur\":\"ge\\u00e7ersiz\",\"aciklama\":\"Ayr\\u0131nt\\u0131.\",\"oneri\":\"Somut \\u00f6rnek.\"},{\"alinti\":\"\\ud83c\\udf31\",\"tur\":\"uzun\",\"aciklama\":\"Ayr\\u0131nt\\u0131.\",\"oneri\":\" \"},{\"alinti\":\"Ba\\u015far\\u0131l\\u0131 bir liderim.\",\"tur\":\"uzun\",\"aciklama\":\"Ayr\\u0131nt\\u0131.\",\"oneri\":\"Somut \\u00f6rnek.\"}],\"kontrol_listesi\":[\" Rol\\u00fcm\\u00fc ekledim. \",\"Rol\\u00fcm\\u00fc ekledim.\",\"\",false,\"KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK\"],\"tam_yanit\":\"At\\u0131lacak alan.\"} bitti.",
+      "expected": {
+        "bolumler": {
+          "motivasyon": {
+            "puan": 3,
+            "gerekce": "🌱GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+            "soru": ""
+          },
+          "kanit": {
+            "puan": 0,
+            "gerekce": "Kanıt gerekir.",
+            "soru": "Bu bölümü hangi somut ayrıntıyla güçlendirebilirsin?"
+          },
+          "uyum": {
+            "puan": 2,
+            "gerekce": "? Örnek {dize} ve \"tırnak\".",
+            "soru": "Ne yaptın?"
+          },
+          "gelecek": {
+            "puan": 2,
+            "gerekce": "Kanıt gerekir.",
+            "soru": "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS"
+          }
+        },
+        "zayif_cumleler": [
+          {
+            "alinti": "Fark yaratmak istiyorum.",
+            "tur": "uzun",
+            "aciklama": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "oneri": "ÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖ"
+          },
+          {
+            "alinti": "Başarılı bir liderim.",
+            "tur": "uzun",
+            "aciklama": "Ayrıntı.",
+            "oneri": "Somut örnek."
+          }
+        ],
+        "kontrol_listesi": [
+          "Rolümü ekledim.",
+          "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+          "Bu alana neden şimdi başvurduğumu açıkladım.",
+          "İddialarımı somut deneyimlerimle destekledim.",
+          "Deneyimimdeki rolümü ve sonucunu belirttim."
+        ],
+        "sinir_kontrolu": {
+          "karakter": {
+            "sayi": 48,
+            "sinir": 25,
+            "asim": 23
+          },
+          "kelime": {
+            "sayi": 7,
+            "sinir": 2,
+            "asim": 5
+          }
+        }
+      }
+    },
+    {
+      "name": "Zayıf cümle ve kontrol listesi üst sınırları",
+      "raw": "{\"bolumler\":{\"motivasyon\":{\"puan\":2,\"gerekce\":\" Kan\\u0131t gerekir. \",\"soru\":\" Ne yapt\\u0131n? \"},\"kanit\":{\"puan\":2,\"gerekce\":\" Kan\\u0131t gerekir. \",\"soru\":\" Ne yapt\\u0131n? \"},\"uyum\":{\"puan\":2,\"gerekce\":\" Kan\\u0131t gerekir. \",\"soru\":\" Ne yapt\\u0131n? \"},\"gelecek\":{\"puan\":2,\"gerekce\":\" Kan\\u0131t gerekir. \",\"soru\":\" Ne yapt\\u0131n? \"}},\"zayif_cumleler\":[{\"alinti\":\"C\\u00fcmle 0.\",\"tur\":\"uzun\",\"aciklama\":\"Ayr\\u0131nt\\u0131.\",\"oneri\":\"Somut \\u00f6rnek.\"},{\"alinti\":\"C\\u00fcmle 1.\",\"tur\":\"uzun\",\"aciklama\":\"Ayr\\u0131nt\\u0131.\",\"oneri\":\"Somut \\u00f6rnek.\"},{\"alinti\":\"C\\u00fcmle 2.\",\"tur\":\"uzun\",\"aciklama\":\"Ayr\\u0131nt\\u0131.\",\"oneri\":\"Somut \\u00f6rnek.\"},{\"alinti\":\"C\\u00fcmle 3.\",\"tur\":\"uzun\",\"aciklama\":\"Ayr\\u0131nt\\u0131.\",\"oneri\":\"Somut \\u00f6rnek.\"},{\"alinti\":\"C\\u00fcmle 4.\",\"tur\":\"uzun\",\"aciklama\":\"Ayr\\u0131nt\\u0131.\",\"oneri\":\"Somut \\u00f6rnek.\"},{\"alinti\":\"C\\u00fcmle 5.\",\"tur\":\"uzun\",\"aciklama\":\"Ayr\\u0131nt\\u0131.\",\"oneri\":\"Somut \\u00f6rnek.\"},{\"alinti\":\"C\\u00fcmle 6.\",\"tur\":\"uzun\",\"aciklama\":\"Ayr\\u0131nt\\u0131.\",\"oneri\":\"Somut \\u00f6rnek.\"},{\"alinti\":\"C\\u00fcmle 7.\",\"tur\":\"uzun\",\"aciklama\":\"Ayr\\u0131nt\\u0131.\",\"oneri\":\"Somut \\u00f6rnek.\"},{\"alinti\":\"C\\u00fcmle 8.\",\"tur\":\"uzun\",\"aciklama\":\"Ayr\\u0131nt\\u0131.\",\"oneri\":\"Somut \\u00f6rnek.\"},{\"alinti\":\"C\\u00fcmle 9.\",\"tur\":\"uzun\",\"aciklama\":\"Ayr\\u0131nt\\u0131.\",\"oneri\":\"Somut \\u00f6rnek.\"},{\"alinti\":\"C\\u00fcmle 10.\",\"tur\":\"uzun\",\"aciklama\":\"Ayr\\u0131nt\\u0131.\",\"oneri\":\"Somut \\u00f6rnek.\"},{\"alinti\":\"C\\u00fcmle 11.\",\"tur\":\"uzun\",\"aciklama\":\"Ayr\\u0131nt\\u0131.\",\"oneri\":\"Somut \\u00f6rnek.\"},{\"alinti\":\"C\\u00fcmle 12.\",\"tur\":\"uzun\",\"aciklama\":\"Ayr\\u0131nt\\u0131.\",\"oneri\":\"Somut \\u00f6rnek.\"},{\"alinti\":\"C\\u00fcmle 13.\",\"tur\":\"uzun\",\"aciklama\":\"Ayr\\u0131nt\\u0131.\",\"oneri\":\"Somut \\u00f6rnek.\"}],\"kontrol_listesi\":[\"Madde 0\",\"Madde 1\",\"Madde 2\",\"Madde 3\",\"Madde 4\",\"Madde 5\",\"Madde 6\",\"Madde 7\",\"Madde 8\",\"Madde 9\"]}",
+      "form": {
+        "program_adi": "İklim Atölyesi",
+        "program_aciklamasi": "Sıcaklık ölçümü ve veri atölyesi.",
+        "soru": "Neden başvuruyorsun?",
+        "deneyimler": "6 noktada sıcaklık ölçtüm.",
+        "taslak": "Cümle 0. Cümle 1. Cümle 2. Cümle 3. Cümle 4. Cümle 5. Cümle 6. Cümle 7. Cümle 8. Cümle 9. Cümle 10. Cümle 11. Cümle 12. Cümle 13.",
+        "karakter_siniri": 25,
+        "kelime_siniri": 2
+      },
+      "expected": {
+        "bolumler": {
+          "motivasyon": {
+            "puan": 2,
+            "gerekce": "Kanıt gerekir.",
+            "soru": "Ne yaptın?"
+          },
+          "kanit": {
+            "puan": 2,
+            "gerekce": "Kanıt gerekir.",
+            "soru": "Ne yaptın?"
+          },
+          "uyum": {
+            "puan": 2,
+            "gerekce": "Kanıt gerekir.",
+            "soru": "Ne yaptın?"
+          },
+          "gelecek": {
+            "puan": 2,
+            "gerekce": "Kanıt gerekir.",
+            "soru": "Ne yaptın?"
+          }
+        },
+        "zayif_cumleler": [
+          {
+            "alinti": "Cümle 0.",
+            "tur": "uzun",
+            "aciklama": "Ayrıntı.",
+            "oneri": "Somut örnek."
+          },
+          {
+            "alinti": "Cümle 1.",
+            "tur": "uzun",
+            "aciklama": "Ayrıntı.",
+            "oneri": "Somut örnek."
+          },
+          {
+            "alinti": "Cümle 2.",
+            "tur": "uzun",
+            "aciklama": "Ayrıntı.",
+            "oneri": "Somut örnek."
+          },
+          {
+            "alinti": "Cümle 3.",
+            "tur": "uzun",
+            "aciklama": "Ayrıntı.",
+            "oneri": "Somut örnek."
+          },
+          {
+            "alinti": "Cümle 4.",
+            "tur": "uzun",
+            "aciklama": "Ayrıntı.",
+            "oneri": "Somut örnek."
+          },
+          {
+            "alinti": "Cümle 5.",
+            "tur": "uzun",
+            "aciklama": "Ayrıntı.",
+            "oneri": "Somut örnek."
+          },
+          {
+            "alinti": "Cümle 6.",
+            "tur": "uzun",
+            "aciklama": "Ayrıntı.",
+            "oneri": "Somut örnek."
+          },
+          {
+            "alinti": "Cümle 7.",
+            "tur": "uzun",
+            "aciklama": "Ayrıntı.",
+            "oneri": "Somut örnek."
+          },
+          {
+            "alinti": "Cümle 8.",
+            "tur": "uzun",
+            "aciklama": "Ayrıntı.",
+            "oneri": "Somut örnek."
+          },
+          {
+            "alinti": "Cümle 9.",
+            "tur": "uzun",
+            "aciklama": "Ayrıntı.",
+            "oneri": "Somut örnek."
+          },
+          {
+            "alinti": "Cümle 10.",
+            "tur": "uzun",
+            "aciklama": "Ayrıntı.",
+            "oneri": "Somut örnek."
+          },
+          {
+            "alinti": "Cümle 11.",
+            "tur": "uzun",
+            "aciklama": "Ayrıntı.",
+            "oneri": "Somut örnek."
+          }
+        ],
+        "kontrol_listesi": [
+          "Madde 0",
+          "Madde 1",
+          "Madde 2",
+          "Madde 3",
+          "Madde 4",
+          "Madde 5",
+          "Madde 6",
+          "Madde 7"
+        ],
+        "sinir_kontrolu": {
+          "karakter": {
+            "sayi": 129,
+            "sinir": 25,
+            "asim": 104
+          },
+          "kelime": {
+            "sayi": 28,
+            "sinir": 2,
+            "asim": 26
+          }
+        }
+      }
+    },
+    {
+      "name": "Bölümler eksik",
+      "raw": "{\"bolumler\":[]}",
+      "error": "Değerlendirme bölümleri eksik."
+    },
+    {
+      "name": "Boş gerekçe",
+      "raw": "{\"bolumler\":{\"motivasyon\":{\"puan\":2,\"gerekce\":\"\\u0131t \",\"soru\":\" Ne yapt\\u0131n? \"},\"kanit\":{\"puan\":2,\"gerekce\":\"\\u0131t \",\"soru\":\" Ne yapt\\u0131n? \"},\"uyum\":{\"puan\":2,\"gerekce\":\"\\u0131t \",\"soru\":\" Ne yapt\\u0131n? \"},\"gelecek\":{\"puan\":2,\"gerekce\":\"\\u0131t \",\"soru\":\" Ne yapt\\u0131n? \"}}}",
+      "expected": {
+        "bolumler": {
+          "motivasyon": {
+            "puan": 2,
+            "gerekce": "ıt",
+            "soru": "Ne yaptın?"
+          },
+          "kanit": {
+            "puan": 2,
+            "gerekce": "ıt",
+            "soru": "Ne yaptın?"
+          },
+          "uyum": {
+            "puan": 2,
+            "gerekce": "ıt",
+            "soru": "Ne yaptın?"
+          },
+          "gelecek": {
+            "puan": 2,
+            "gerekce": "ıt",
+            "soru": "Ne yaptın?"
+          }
+        },
+        "zayif_cumleler": [],
+        "kontrol_listesi": [
+          "Bu alana neden şimdi başvurduğumu açıkladım.",
+          "İddialarımı somut deneyimlerimle destekledim.",
+          "Deneyimimdeki rolümü ve sonucunu belirttim.",
+          "Program açıklamasındaki bir imkânı hedefimle ilişkilendirdim.",
+          "Programdan sonra atacağım adımı belirttim."
+        ],
+        "sinir_kontrolu": {
+          "karakter": {
+            "sayi": 48,
+            "sinir": 25,
+            "asim": 23
+          },
+          "kelime": {
+            "sayi": 7,
+            "sinir": 2,
+            "asim": 5
+          }
+        }
+      }
+    },
+    {
+      "name": "Mantıksal puan reddi",
+      "raw": "{\"bolumler\":{\"motivasyon\":{\"puan\":true,\"gerekce\":\" Kan\\u0131t gerekir. \",\"soru\":\" Ne yapt\\u0131n? \"},\"kanit\":{\"puan\":2,\"gerekce\":\" Kan\\u0131t gerekir. \",\"soru\":\" Ne yapt\\u0131n? \"},\"uyum\":{\"puan\":2,\"gerekce\":\" Kan\\u0131t gerekir. \",\"soru\":\" Ne yapt\\u0131n? \"},\"gelecek\":{\"puan\":2,\"gerekce\":\" Kan\\u0131t gerekir. \",\"soru\":\" Ne yapt\\u0131n? \"}}}",
+      "error": "Bölüm puanı geçersiz."
+    },
+    {
+      "name": "Ondalık puan reddi",
+      "raw": "{\"bolumler\":{\"motivasyon\":{\"puan\":2.0,\"gerekce\":\" Kan\\u0131t gerekir. \",\"soru\":\" Ne yapt\\u0131n? \"},\"kanit\":{\"puan\":2,\"gerekce\":\" Kan\\u0131t gerekir. \",\"soru\":\" Ne yapt\\u0131n? \"},\"uyum\":{\"puan\":2,\"gerekce\":\" Kan\\u0131t gerekir. \",\"soru\":\" Ne yapt\\u0131n? \"},\"gelecek\":{\"puan\":2,\"gerekce\":\" Kan\\u0131t gerekir. \",\"soru\":\" Ne yapt\\u0131n? \"}}}",
+      "error": "Bölüm puanı geçersiz."
+    },
+    {
+      "name": "Üslü puan reddi",
+      "raw": "{\"bolumler\":{\"motivasyon\":{\"puan\":2e0,\"gerekce\":\" Kan\\u0131t gerekir. \",\"soru\":\" Ne yapt\\u0131n? \"},\"kanit\":{\"puan\":2,\"gerekce\":\" Kan\\u0131t gerekir. \",\"soru\":\" Ne yapt\\u0131n? \"},\"uyum\":{\"puan\":2,\"gerekce\":\" Kan\\u0131t gerekir. \",\"soru\":\" Ne yapt\\u0131n? \"},\"gelecek\":{\"puan\":2,\"gerekce\":\" Kan\\u0131t gerekir. \",\"soru\":\" Ne yapt\\u0131n? \"}}}",
+      "error": "Bölüm puanı geçersiz."
+    },
+    {
+      "name": "NaN puan reddi",
+      "raw": "{\"bolumler\":{\"motivasyon\":{\"puan\":NaN,\"gerekce\":\" Kan\\u0131t gerekir. \",\"soru\":\" Ne yapt\\u0131n? \"},\"kanit\":{\"puan\":2,\"gerekce\":\" Kan\\u0131t gerekir. \",\"soru\":\" Ne yapt\\u0131n? \"},\"uyum\":{\"puan\":2,\"gerekce\":\" Kan\\u0131t gerekir. \",\"soru\":\" Ne yapt\\u0131n? \"},\"gelecek\":{\"puan\":2,\"gerekce\":\" Kan\\u0131t gerekir. \",\"soru\":\" Ne yapt\\u0131n? \"}}}",
+      "error": "Bölüm puanı geçersiz."
+    },
+    {
+      "name": "Geçersiz JSON",
+      "raw": "Yanıt {\"bolumler\": }",
+      "error": ""
+    },
+    {
+      "name": "Hatalı ilk JSON nesnesi",
+      "raw": "Önce {bozuk}. {\"bolumler\":{\"motivasyon\":{\"puan\":2,\"gerekce\":\" Kan\\u0131t gerekir. \",\"soru\":\" Ne yapt\\u0131n? \"},\"kanit\":{\"puan\":2,\"gerekce\":\" Kan\\u0131t gerekir. \",\"soru\":\" Ne yapt\\u0131n? \"},\"uyum\":{\"puan\":2,\"gerekce\":\" Kan\\u0131t gerekir. \",\"soru\":\" Ne yapt\\u0131n? \"},\"gelecek\":{\"puan\":2,\"gerekce\":\" Kan\\u0131t gerekir. \",\"soru\":\" Ne yapt\\u0131n? \"}}}",
+      "error": ""
+    },
+    {
+      "name": "JSON dizisi kök olamaz",
+      "raw": "[{\"bolumler\":{\"motivasyon\":{\"puan\":2,\"gerekce\":\" Kan\\u0131t gerekir. \",\"soru\":\" Ne yapt\\u0131n? \"},\"kanit\":{\"puan\":2,\"gerekce\":\" Kan\\u0131t gerekir. \",\"soru\":\" Ne yapt\\u0131n? \"},\"uyum\":{\"puan\":2,\"gerekce\":\" Kan\\u0131t gerekir. \",\"soru\":\" Ne yapt\\u0131n? \"},\"gelecek\":{\"puan\":2,\"gerekce\":\" Kan\\u0131t gerekir. \",\"soru\":\" Ne yapt\\u0131n? \"}}}]",
+      "error": "Değerlendirme bölümleri eksik."
+    }
+  ],
+  "demo": [
+    {
+      "name": "Klişe, kanıtsız iddia ve aşım",
+      "form": {},
+      "expected": {
+        "bolumler": {
+          "motivasyon": {
+            "puan": 2,
+            "gerekce": "Taslakta bir hedef veya zamanlama işareti var.",
+            "soru": "Bu alana yönelmene ne sebep oldu ve neden şimdi başvuruyorsun?"
+          },
+          "kanit": {
+            "puan": 0,
+            "gerekce": "Taslakta somut bir deneyim veya sonuç görünmüyor.",
+            "soru": "Hangi deneyimde ne yaptın ve sonucunu nasıl gözlemledin?"
+          },
+          "uyum": {
+            "puan": 0,
+            "gerekce": "Programla bağlantıyı görünür kılan bir ayrıntı bulunamadı.",
+            "soru": "Program metnindeki hangi imkân, üzerinde çalıştığın hangi hedefe uyuyor?"
+          },
+          "gelecek": {
+            "puan": 0,
+            "gerekce": "Program sonrasındaki planın taslakta görünmüyor.",
+            "soru": "Programdan sonra öğrendiklerini kiminle, hangi ilk adımla paylaşacaksın?"
+          }
+        },
+        "zayif_cumleler": [
+          {
+            "alinti": "Fark yaratmak istiyorum.",
+            "tur": "genel/klişe",
+            "aciklama": "Bu ifade sana özgü bir neden göstermiyor.",
+            "oneri": "[Seni başvuruya yönelten deneyim] sırasında [ilgini çeken konuyu] fark ettim."
+          },
+          {
+            "alinti": "Başarılı bir liderim.",
+            "tur": "kanıtsız iddia",
+            "aciklama": "Bu iddiayı destekleyen bir eylem veya sonuç görünmüyor.",
+            "oneri": "[Deneyim] sırasında [üstlendiğin görev] ile [gözlemlediğin sonuç] elde ettim."
+          }
+        ],
+        "kontrol_listesi": [
+          "Bu alana neden şimdi başvurduğumu açıkladım.",
+          "İddialarımı somut deneyimlerimle destekledim.",
+          "Deneyimimdeki rolümü ve sonucunu belirttim.",
+          "Program açıklamasındaki bir imkânı hedefimle ilişkilendirdim.",
+          "Programdan sonra atacağım adımı belirttim.",
+          "Soruya odaklandım ve varsa uzunluk sınırına uydum."
+        ],
+        "sinir_kontrolu": {
+          "karakter": {
+            "sayi": 48,
+            "sinir": 25,
+            "asim": 23
+          },
+          "kelime": {
+            "sayi": 7,
+            "sinir": 2,
+            "asim": 5
+          }
+        }
+      }
+    },
+    {
+      "name": "Uzun cümle ve somutluk",
+      "form": {
+        "taslak": "Bu yıl öğrenmek istiyorum. taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak. ٣ noktada sıcaklık ölçtüm. Sonra bir atölye yapacağım."
+      },
+      "expected": {
+        "bolumler": {
+          "motivasyon": {
+            "puan": 3,
+            "gerekce": "Taslakta bir hedef veya zamanlama işareti var.",
+            "soru": ""
+          },
+          "kanit": {
+            "puan": 3,
+            "gerekce": "Taslakta bir deneyim, ölçü veya sonuç işareti var.",
+            "soru": ""
+          },
+          "uyum": {
+            "puan": 1,
+            "gerekce": "Taslak ve program açıklamasında ortak sözcükler var.",
+            "soru": "Program metnindeki hangi imkân, üzerinde çalıştığın hangi hedefe uyuyor?"
+          },
+          "gelecek": {
+            "puan": 3,
+            "gerekce": "Taslakta geleceğe dönük bir ifade var.",
+            "soru": ""
+          }
+        },
+        "zayif_cumleler": [
+          {
+            "alinti": "taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak taslak.",
+            "tur": "uzun",
+            "aciklama": "Cümlenin ana fikrini takip etmek zorlaşıyor.",
+            "oneri": "[Cümlenin ana fikri]. [Bu fikri destekleyen tek ayrıntı]."
+          }
+        ],
+        "kontrol_listesi": [
+          "Bu alana neden şimdi başvurduğumu açıkladım.",
+          "İddialarımı somut deneyimlerimle destekledim.",
+          "Deneyimimdeki rolümü ve sonucunu belirttim.",
+          "Program açıklamasındaki bir imkânı hedefimle ilişkilendirdim.",
+          "Programdan sonra atacağım adımı belirttim.",
+          "Soruya odaklandım ve varsa uzunluk sınırına uydum."
+        ],
+        "sinir_kontrolu": {
+          "karakter": {
+            "sayi": 292,
+            "sinir": 25,
+            "asim": 267
+          },
+          "kelime": {
+            "sayi": 42,
+            "sinir": 2,
+            "asim": 40
+          }
+        }
+      }
+    },
+    {
+      "name": "Belirsiz taslak ve satır ayrımı",
+      "form": {
+        "taslak": "Başarılıyım.\nBüyük bir fırsat!\n🌱",
+        "karakter_siniri": null
+      },
+      "expected": {
+        "bolumler": {
+          "motivasyon": {
+            "puan": 0,
+            "gerekce": "Alana ilgin ve başvuru zamanlaman taslakta belirsiz.",
+            "soru": "Bu alana yönelmene ne sebep oldu ve neden şimdi başvuruyorsun?"
+          },
+          "kanit": {
+            "puan": 0,
+            "gerekce": "Taslakta somut bir deneyim veya sonuç görünmüyor.",
+            "soru": "Hangi deneyimde ne yaptın ve sonucunu nasıl gözlemledin?"
+          },
+          "uyum": {
+            "puan": 0,
+            "gerekce": "Programla bağlantıyı görünür kılan bir ayrıntı bulunamadı.",
+            "soru": "Program metnindeki hangi imkân, üzerinde çalıştığın hangi hedefe uyuyor?"
+          },
+          "gelecek": {
+            "puan": 0,
+            "gerekce": "Program sonrasındaki planın taslakta görünmüyor.",
+            "soru": "Programdan sonra öğrendiklerini kiminle, hangi ilk adımla paylaşacaksın?"
+          }
+        },
+        "zayif_cumleler": [
+          {
+            "alinti": "Başarılıyım.",
+            "tur": "kanıtsız iddia",
+            "aciklama": "Bu iddiayı destekleyen bir eylem veya sonuç görünmüyor.",
+            "oneri": "[Deneyim] sırasında [üstlendiğin görev] ile [gözlemlediğin sonuç] elde ettim."
+          },
+          {
+            "alinti": "Büyük bir fırsat!",
+            "tur": "genel/klişe",
+            "aciklama": "Bu ifade sana özgü bir neden göstermiyor.",
+            "oneri": "[Seni başvuruya yönelten deneyim] sırasında [ilgini çeken konuyu] fark ettim."
+          }
+        ],
+        "kontrol_listesi": [
+          "Bu alana neden şimdi başvurduğumu açıkladım.",
+          "İddialarımı somut deneyimlerimle destekledim.",
+          "Deneyimimdeki rolümü ve sonucunu belirttim.",
+          "Program açıklamasındaki bir imkânı hedefimle ilişkilendirdim.",
+          "Programdan sonra atacağım adımı belirttim.",
+          "Soruya odaklandım ve varsa uzunluk sınırına uydum."
+        ],
+        "sinir_kontrolu": {
+          "karakter": {
+            "sayi": 32,
+            "sinir": null,
+            "asim": 0
+          },
+          "kelime": {
+            "sayi": 5,
+            "sinir": 2,
+            "asim": 3
+          }
+        }
+      }
+    }
+  ]
+}

@@ -118,7 +118,7 @@ def choose_provider(force_demo=False, environ=None, dotenv_path=None):
     anthropic = config.get("ANTHROPIC_API_KEY", "").strip()
     openrouter = config.get("OPENROUTER_API_KEY", "").strip()
     if anthropic:
-        return Provider("anthropic", model or "claude-sonnet-5-5", anthropic)
+        return Provider("anthropic", model or "claude-haiku-5-5", anthropic)
     if openrouter:
         return Provider("openrouter", model or "anthropic/claude-haiku-5.5", openrouter)
     return Provider("demo")

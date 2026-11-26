@@ -7,7 +7,7 @@ import re
 from urllib.parse import urlsplit
 
 from .analysis import validate_form
-from .llm import EvaluationError
+from .llm import EvaluationError, SYSTEM_PROMPT
 
 MAX_BODY = 64 * 1024
 STATIC = Path(__file__).resolve().parent / "static"
@@ -16,7 +16,14 @@ ASSETS = {
     "/index.html": ("index.html", "text/html"),
     "/style.css": ("style.css", "text/css"),
     "/app.js": ("app.js", "text/javascript"),
+    "/analysis.mjs": ("analysis.mjs", "text/javascript"),
+    "/demo.mjs": ("demo.mjs", "text/javascript"),
+    "/config.mjs": ("config.mjs", "text/javascript"),
 }
+
+
+def prompt_module():
+    return f"export const systemPrompt = {json.dumps(SYSTEM_PROMPT)};\n".encode()
 
 
 class WorkshopServer(ThreadingHTTPServer):
@@ -84,6 +91,8 @@ class WorkshopHandler(BaseHTTPRequestHandler):
             return
         if path == "/api/durum":
             self.send_json(200, self.server.provider.status())
+        elif path == "/prompt.mjs":
+            self.send_bytes(200, "text/javascript", prompt_module())
         elif path in ASSETS:
             filename, content_type = ASSETS[path]
             self.send_bytes(200, content_type, (STATIC / filename).read_bytes())

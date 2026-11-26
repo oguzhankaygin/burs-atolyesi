@@ -2,16 +2,22 @@
 
 import argparse
 
+from .build import build_site
 from .llm import choose_provider
 from .server import WorkshopServer
 
 
 def main():
     parser = argparse.ArgumentParser(description="Burs Başvuru Cümle Atölyesi")
+    parser.add_argument("command", nargs="?", choices=["build-site"],
+                        help="GitHub Pages dosyalarını docs/ altında üret")
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", type=int, default=8790)
     parser.add_argument("--demo", action="store_true", help="Yerel demo sağlayıcısını kullan")
     args = parser.parse_args()
+    if args.command == "build-site":
+        build_site()
+        return
     with WorkshopServer((args.host, args.port), choose_provider(args.demo)) as server:
         print(f"Atölye http://{args.host}:{server.server_port} adresinde hazır.", flush=True)
         try:

@@ -99,7 +99,7 @@ class ProviderTests(unittest.TestCase):
         self.assertEqual(provider().status(), {"saglayici": "demo", "model": None, "demo": True})
         keys = {"ANTHROPIC_API_KEY": "a", "OPENROUTER_API_KEY": "b"}
         with patch.dict("os.environ", keys, clear=True):
-            self.assertEqual(choose_provider(dotenv_path=MISSING_ENV).model, "claude-sonnet-5-5")
+            self.assertEqual(choose_provider(dotenv_path=MISSING_ENV).model, "claude-haiku-5-5")
         self.assertEqual(provider(keys, True).name, "demo")
         self.assertEqual(provider({"OPENROUTER_API_KEY": "b"}).model, "anthropic/claude-haiku-5.5")
         self.assertEqual(provider(dict(keys, ATOLYE_MODEL="override")).model, "override")
@@ -229,7 +229,13 @@ class HTTPTests(unittest.TestCase):
         self.assertIn("default-src 'self'", headers["Content-Security-Policy"])
         self.assertEqual(headers["X-Content-Type-Options"], "nosniff")
         self.assertEqual(headers["Referrer-Policy"], "no-referrer")
-        for route, mime in (("/", "text/html"), ("/app.js", "text/javascript"), ("/style.css", "text/css")):
+        assets = [
+            ("/", "text/html"),
+            ("/style.css", "text/css"),
+            *((f"/{name}", "text/javascript") for name in
+              ("app.js", "analysis.mjs", "demo.mjs", "config.mjs", "prompt.mjs")),
+        ]
+        for route, mime in assets:
             status, headers, body = self.request("GET", route)
             self.assertEqual(status, 200)
             self.assertTrue(headers["Content-Type"].startswith(mime))

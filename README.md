@@ -1,6 +1,18 @@
 # Burs Başvuru Cümle Atölyesi
 
-Türk öğrencilerin burs ve program başvurularındaki kısa yanıtlarını kendi sesleriyle geliştirmelerine yardımcı olan yerel bir web aracı. Atölye öğrencinin yerine tam yanıt yazmaz. Cümle düzeyinde öneriler verir ve eksik ayrıntıları sorularla görünür kılar.
+Türk öğrencilerin burs ve program başvurularındaki kısa yanıtlarını kendi sesleriyle geliştirmelerine yardımcı olan bir web aracı. Atölye öğrencinin yerine tam yanıt yazmaz. Cümle düzeyinde öneriler verir ve eksik ayrıntıları sorularla görünür kılar.
+
+## Tarayıcıda kullan
+
+[Burs Başvuru Cümle Atölyesi’ni aç](https://oguzhankaygin.github.io/burs-atolyesi/). GitHub Pages sürümü kurulum ve API anahtarı gerektirmez.
+
+1. **Hızlı kontrol (çevrimdışı)** ile taslağını sayfa yüklendikten sonra bağlantı olmadan incele.
+2. **Claude ile değerlendir** düğmesi istemi panoya kopyalar ve Claude’u açar. Kendi ücretsiz hesabına giriş yapıp istemi sohbete gönder. Tarayıcı panoya erişim vermezse sayfada seçili istemi kopyala.
+3. Claude’un yanıtını **Claude’un yanıtını yapıştır** alanına ekle ve **Yanıtı göster** düğmesine bas.
+
+Statik sayfa başvuru verilerini sunucuya göndermez. Claude’a yapıştırdığın metin Claude ile paylaşılır. Bu akış proje adına ücretli API isteği oluşturmaz. Claude’un ücretsiz hesabındaki kullanım sınırları geçerlidir.
+
+Arayüz kaynakları `atolye/static/` altındadır. Kaynakları değiştirince `python3 -m atolye build-site` komutuyla `docs/` kopyasını güncelle. GitHub Pages yayın kaynağı olarak ana dalın `/docs` klasörünü seç.
 
 ## Ekran
 
@@ -24,11 +36,11 @@ Anahtarı ortam değişkeni olarak ayarla veya `.env.example` dosyasını repo k
 
 | Ayar | Kullanım |
 | --- | --- |
-| `ANTHROPIC_API_KEY` | İlk tercih, varsayılan model `claude-sonnet-5-5` |
+| `ANTHROPIC_API_KEY` | İlk tercih, varsayılan model `claude-haiku-5-5` |
 | `OPENROUTER_API_KEY` | Anthropic anahtarı boşsa kullanılır, varsayılan model `anthropic/claude-haiku-5.5` |
 | `ATOLYE_MODEL` | Seçilen sağlayıcının model adını değiştirir |
 
-Model erişimi hesabına ve sağlayıcına bağlıdır. Sağlayıcı isteğinin ağ zaman aşımı 90 saniyedir.
+Sunucuda sağlayıcıyla değerlendirme, kullanılan API hesabına maliyet doğurabilir. Hızlı kontrol ve Claude’a elle kopyalama akışı API anahtarı kullanmaz. Model erişimi hesabına ve sağlayıcına bağlıdır. Sağlayıcı isteğinin ağ zaman aşımı 90 saniyedir.
 
 ## Demo modu
 
@@ -36,7 +48,7 @@ Anahtar bulunmadığında demo otomatik açılır. Anahtarlı bir ortamda zorlam
 
 ## Gizlilik
 
-Sunucu başvuru metinlerini diske veya günlüklere yazmaz. Anahtarlar sunucuda kalır. Claude kullanıldığında değerlendirme için form metni seçilen sağlayıcıya gönderilir ve sağlayıcının veri koşulları geçerli olur. Demo modunda metin yerel sunucuda işlenir. **Taslağımı bu tarayıcıda tut** seçeneği formu yalnızca o tarayıcıda saklar. **Temizle** düğmesi formu, sonuçları ve yerel taslağı siler.
+Sunucu başvuru metinlerini diske veya günlüklere yazmaz. Anahtarlar sunucuda kalır. Sunucuda değerlendirme seçildiğinde form metni, demo dışındaki modlarda seçilen sağlayıcıya gönderilir ve sağlayıcının veri koşulları geçerli olur. Demo modunda metin yerel sunucuda işlenir. **Taslağımı bu tarayıcıda tut** seçeneği formu yalnızca o tarayıcıda saklar. **Temizle** düğmesi formu, sonuçları ve yerel taslağı siler.
 
 ## Sınırlamalar
 
@@ -52,13 +64,10 @@ Puanlar düzenleme rehberidir. Demo, sözcük ve kalıp eşleşmelerine dayandı
 
 ```sh
 PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v
-node --check atolye/static/*.js
+node --test
+for dosya in atolye/static/*.js atolye/static/*.mjs docs/*.js docs/*.mjs; do
+  node --check "$dosya" || exit
+done
 ```
 
-Python testleri dış ağa bağlanmadan çalışır. HTTP testleri yerel döngü adresinde geçici bir port kullanır. TCP soketi açılamayan ortamlarda aynı HTTP işleyicisini bellek içi HTTP akışları üzerinden çalıştırır. Node.js yalnızca JavaScript sözdizimi kontrolü içindir.
-
-## Gerekli bilgiler
-
-- **API anahtarı:** Ortak bir kurulum için `ANTHROPIC_API_KEY` gerekiyor. Şimdilik yerelde OpenRouter anahtarıyla çalışıyor. Anahtar yoksa araç demo moduna geçer.
-- **Barındırma:** Herkesin kullanabilmesi için bir sunucu ya da alan adı seçilmeli. Kamuya açılırsa istek sınırlaması da eklenmeli.
-- **Yayın kararı:** GitHub deposu şimdilik gizli. Herkese açık yapılıp yapılmayacağına karar verilmeli.
+Python testleri dış ağa bağlanmadan çalışır. HTTP testleri yerel döngü adresinde geçici bir port kullanır. TCP soketi açılamayan ortamlarda aynı HTTP işleyicisini bellek içi HTTP akışları üzerinden çalıştırır.
