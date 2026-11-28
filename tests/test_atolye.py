@@ -234,12 +234,17 @@ class HTTPTests(unittest.TestCase):
             ("/style.css", "text/css"),
             *((f"/{name}", "text/javascript") for name in
               ("app.js", "analysis.mjs", "demo.mjs", "config.mjs", "prompt.mjs")),
+            ("/manifest.webmanifest", "application/manifest+json"),
+            ("/ikon.svg", "image/svg+xml"),
+            ("/ikon-192.png", "image/png"),
+            ("/ikon-512.png", "image/png"),
         ]
         for route, mime in assets:
             status, headers, body = self.request("GET", route)
             self.assertEqual(status, 200)
             self.assertTrue(headers["Content-Type"].startswith(mime))
             self.assertTrue(body)
+        self.assertEqual(self.request("GET", "/ikon-512.png")[1]["Content-Type"], "image/png")
         self.assertEqual(self.request("GET", "/.env")[0], 404)
 
     def test_evaluation_statuses(self):

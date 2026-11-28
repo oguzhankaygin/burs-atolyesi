@@ -9,7 +9,7 @@ DOCS = STATIC.parent.parent / "docs"
 SW_TEMPLATE = """"use strict";
 
 // Ağ öncelikli önbellek: çevrimiçiyken güncel dosya, bağlantı yokken son kopya.
-const CACHE = "burs-atolyesi-v1";
+const CACHE = "burs-atolyesi-v2";
 const DOSYALAR = __DOSYALAR__;
 
 self.addEventListener("install", event => {

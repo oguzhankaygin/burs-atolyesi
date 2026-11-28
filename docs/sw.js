@@ -1,8 +1,8 @@
 "use strict";
 
 // Ağ öncelikli önbellek: çevrimiçiyken güncel dosya, bağlantı yokken son kopya.
-const CACHE = "burs-atolyesi-v1";
-const DOSYALAR = ["./", "./analysis.mjs", "./app.js", "./config.mjs", "./demo.mjs", "./index.html", "./prompt.mjs", "./style.css"];
+const CACHE = "burs-atolyesi-v2";
+const DOSYALAR = ["./", "./analysis.mjs", "./app.js", "./config.mjs", "./demo.mjs", "./ikon-192.png", "./ikon-512.png", "./ikon.svg", "./index.html", "./manifest.webmanifest", "./prompt.mjs", "./style.css"];
 
 self.addEventListener("install", event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(DOSYALAR)).then(() => self.skipWaiting()));

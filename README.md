@@ -6,6 +6,8 @@ Türk öğrencilerin burs ve program başvurularındaki kısa yanıtlarını ken
 
 [Burs Başvuru Cümle Atölyesi’ni aç](https://oguzhankaygin.github.io/burs-atolyesi/). GitHub Pages sürümü kurulum ve API anahtarı gerektirmez.
 
+Telefonda tarayıcı menüsündeki **Ana ekrana ekle** (iPhone’da Paylaş → Ana Ekrana Ekle) seçeneğiyle uygulama gibi açabilirsin; bir kez açıldıktan sonra internetsiz de çalışır.
+
 1. **Hızlı kontrol (çevrimdışı)** ile taslağını sayfa yüklendikten sonra bağlantı olmadan incele.
 2. **Claude ile değerlendir** düğmesi istemi panoya kopyalar ve Claude’u açar. Kendi ücretsiz hesabına giriş yapıp istemi sohbete gönder. Tarayıcı panoya erişim vermezse sayfada seçili istemi kopyala.
 3. Claude’un yanıtını **Claude’un yanıtını yapıştır** alanına ekle ve **Yanıtı göster** düğmesine bas.

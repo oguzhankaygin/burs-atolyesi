@@ -19,6 +19,10 @@ ASSETS = {
     "/analysis.mjs": ("analysis.mjs", "text/javascript"),
     "/demo.mjs": ("demo.mjs", "text/javascript"),
     "/config.mjs": ("config.mjs", "text/javascript"),
+    "/manifest.webmanifest": ("manifest.webmanifest", "application/manifest+json"),
+    "/ikon.svg": ("ikon.svg", "image/svg+xml"),
+    "/ikon-192.png": ("ikon-192.png", "image/png"),
+    "/ikon-512.png": ("ikon-512.png", "image/png"),
 }
 
 
@@ -49,7 +53,8 @@ class WorkshopHandler(BaseHTTPRequestHandler):
 
     def send_bytes(self, status, content_type, body):
         self.send_response(status)
-        self.send_header("Content-Type", f"{content_type}; charset=utf-8")
+        charset = "" if content_type.startswith("image/png") else "; charset=utf-8"
+        self.send_header("Content-Type", f"{content_type}{charset}")
         self.send_header("Content-Length", str(len(body)))
         self.send_header("Content-Security-Policy",
                          "default-src 'self'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'")
